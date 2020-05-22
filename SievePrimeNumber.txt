@@ -3,8 +3,11 @@ public class SievePrimeNumber {
 
     public static void checkPrime(int num) {
         boolean[] prime = new boolean[num + 1];
-
-                  }
+        
+        for (int i = 2; i <= num; i++) {
+            prime[i] = true;
+        }
+     }
 
     public static void main(String[] args) {
        checkPrime();
