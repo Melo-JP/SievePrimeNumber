@@ -1,0 +1,13 @@
+
+public class SievePrimeNumber {
+
+    public static void checkPrime(int num) {
+        boolean[] prime = new boolean[num + 1];
+
+                  }
+
+    public static void main(String[] args) {
+       checkPrime();
+
+    }
+}
