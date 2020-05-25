@@ -7,6 +7,15 @@ public class SievePrimeNumber {
         for (int i = 2; i <= num; i++) {
             prime[i] = true;
         }
+        
+        for (int p = 2; p <= Math.sqrt(num); p++) {
+            if (prime[p]) {
+
+                for (int j = p; p * j <= num; j++)
+                    prime[j * p] = false;
+            }
+        }
+        
      }
 
     public static void main(String[] args) {
