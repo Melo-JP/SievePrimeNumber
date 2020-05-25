@@ -1,13 +1,14 @@
+import java.util.Scanner;
 
 public class SievePrimeNumber {
 
     public static void checkPrime(int num) {
         boolean[] prime = new boolean[num + 1];
-        
+
         for (int i = 2; i <= num; i++) {
             prime[i] = true;
         }
-        
+
         for (int p = 2; p <= Math.sqrt(num); p++) {
             if (prime[p]) {
 
@@ -15,17 +16,21 @@ public class SievePrimeNumber {
                     prime[j * p] = false;
             }
         }
-        
-         for (int i = 2; i <= num; i++) {
+
+        for (int i = 2; i <= num; i++) {
             if (prime[i]) {
                 System.out.println(i + " ");
             }
         }
-        
-     }
+    }
 
     public static void main(String[] args) {
-       checkPrime();
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Please enter number to check:  ");
+        int number = input.nextInt();
+
+        checkPrime(number);
 
     }
 }
